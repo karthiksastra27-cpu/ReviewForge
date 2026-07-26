@@ -85,7 +85,7 @@ export default function Home() {
 
       <section className="hero-v2 fade-in">
         <div className="hero-copy">
-          <span className="badge-pill">⚡ Powered by Groq AI</span>
+          <span className="badge-pill">⚡ Powered by OpenRouter AI</span>
           <h1 className="hero-title-v2">
             AI Code Reviews<br />That Think Like<br />Senior Developers.
           </h1>
