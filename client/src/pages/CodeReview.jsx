@@ -226,7 +226,7 @@ export default function CodeReview() {
 
           {loading && (
             <div className="analyzing-block">
-              <div className="analyzing-text">🤖 Analysing your code with Groq AI…</div>
+              <div className="analyzing-text">🤖 Analysing your code with OpenRouter AI…</div>
               <div className="progress-track">
                 <div className="progress-fill" />
               </div>
