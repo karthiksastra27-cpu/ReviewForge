@@ -69,7 +69,7 @@ export default function CodeReview() {
     setLoading(true);
     const startedAt = performance.now();
     try {
-      const res = await fetch("http://localhost:4000/api/review", {
+      const res = await fetch("/api/review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, language }),
@@ -82,7 +82,7 @@ export default function CodeReview() {
         setReviewTime(((performance.now() - startedAt) / 1000).toFixed(1));
       }
     } catch {
-      setError("Could not reach the server. Is it running on port 4000?");
+      setError("Could not reach the server. Please try again.");
     } finally {
       setLoading(false);
     }

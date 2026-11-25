@@ -16,11 +16,11 @@ export default function History() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("http://localhost:4000/api/reviews");
+      const res = await fetch("/api/reviews");
       const data = await res.json();
       setReviews(data.reviews || []);
     } catch {
-      setError("Could not reach the server. Is it running on port 4000?");
+      setError("Could not reach the server. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -28,7 +28,7 @@ export default function History() {
 
   async function handleDelete(id) {
     try {
-      await fetch(`http://localhost:4000/api/reviews/${id}`, { method: "DELETE" });
+      await fetch(`/api/reviews/${id}`, { method: "DELETE" });
       setReviews((prev) => prev.filter((r) => r.id !== id));
     } catch {
       setError("Could not delete that review.");

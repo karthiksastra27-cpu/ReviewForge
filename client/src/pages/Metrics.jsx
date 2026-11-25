@@ -15,11 +15,11 @@ export default function Metrics() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch("http://localhost:4000/api/reviews");
+        const res = await fetch("/api/reviews");
         const data = await res.json();
         setReviews(data.reviews || []);
       } catch {
-        setError("Could not reach the server. Is it running on port 4000?");
+        setError("Could not reach the server. Please try again.");
       } finally {
         setLoading(false);
       }
